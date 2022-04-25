@@ -1,27 +1,28 @@
-import React, {useState} from 'react';
-import {StyleSheet, View, Text, Button, TextInput} from 'react-native'; 
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, Button, TextInput } from 'react-native';
 import Saldo from './components/Saldo';
 import Lancamento from './components/Lancamento';
+import SaldoProvider from './context/ContaContext';
 
 
 const App = () => {
 
-  const [saldo, setSaldo] = useState(0);
-
   return (
-    <View style={styles.container}> 
-    <Saldo valor={saldo}/> 
-    <Lancamento credito/>
-    <Lancamento/>
-    </View>
-  
+    <SaldoProvider>
+      <View style={styles.container}>
+        <Saldo />
+        <Lancamento credito />
+        <Lancamento />
+      </View>
+    </SaldoProvider>
+
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex:1, 
-    backgroundColor:'white',
+    flex: 1,
+    backgroundColor: 'white',
     padding: 20
   }
 });
