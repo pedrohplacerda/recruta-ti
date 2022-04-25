@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View, Text, Button, TextInput} from 'react-native'; 
+import Saldo from './components/Saldo';
+import Lancamento from './components/Lancamento';
 
-export default function App() {
+
+const App = () => {
+
+  const [saldo, setSaldo] = useState(0);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.container}> 
+    <Saldo valor={saldo}/> 
+    <Lancamento credito/>
+    <Lancamento/>
     </View>
+  
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flex:1, 
+    backgroundColor:'white',
+    padding: 20
+  }
 });
+
+export default App;
