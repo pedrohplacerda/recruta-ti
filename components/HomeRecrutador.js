@@ -1,14 +1,15 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-
 const HomeRecrutador = () => {
 
   return (
-    <Text style={styles.text}>
-      Olá, Recrutador! 
-      Profissionais para a sua vaga:
-    </Text>
+    <View>
+      <Text style={styles.text}>
+        Olá, Recrutador!
+        Profissionais para a sua vaga:
+      </Text>
+    </View>
   );
 }
 
@@ -20,7 +21,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   }
 });
-
-
 
 export default HomeRecrutador;
