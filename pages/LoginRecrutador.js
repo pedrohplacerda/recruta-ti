@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Body from '../components/Body';
 import Input from '../components/Input';
 
-const App = () => {
+const LoginRecrutador = () => {
 
   const [email, setEmail] = React.useState("");
   const [senha, setSenha] = React.useState("");
@@ -36,6 +36,9 @@ const App = () => {
         <Button mode="contained" onPress={() => console.log('Pressed')}>
           Login
         </Button>
+        <Text style={styles.text}>
+          Ainda não possui cadastro? Clique aqui.
+        </Text>
       </Body>
     </Container>
   );
@@ -54,4 +57,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default LoginRecrutador;
